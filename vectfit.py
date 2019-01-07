@@ -161,7 +161,7 @@ def print_params(poles, residues, d, h):
     print("offset: {:g}".format(d))
     print("slope: {:g}".format(h))
 
-def vectfit_auto(f, s, n_poles=10, n_iter=10, show=False,
+def vectfit_auto(f, s, n_poles=10, n_iter=10, show=False, verbose=True,
                  inc_real=False, loss_ratio=1e-2, rcond=-1, track_poles=False):
     w = imag(s)
     pole_locs = linspace(w[0], w[-1], n_poles+2)[1:-1]
